@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Hahi</string>
+    <string name="Ha_hi_doing">Сделать ха-хы</string>
+    <string name="description_for_image">Лисичка танцует и делает ха-хы</string>
+    <string name="hahi_description">Вы сделали ха-хы уже...</string>
+
+    <string name="raz">раз_(а)</string>
+</resources>
