@@ -33,7 +33,10 @@ class HahiFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.tvCount.text ="0"
+        if (savedInstanceState!=null){
+            countOfHahi = savedInstanceState.getInt(KEY_SAVE_SCORE)
+            binding.tvCount.text = savedInstanceState.getInt(KEY_SAVE_SCORE).toString()
+        } else  binding.tvCount.text ="0"
         binding.ivFox.setOnClickListener {
             foxLeftOrRight(it)
             binding.tvCount.text = countOfHahi.toString()
@@ -61,10 +64,10 @@ class HahiFragment : Fragment() {
         }
     }
 
-  /*  override fun onSaveInstanceState(outState: Bundle) {
+   override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putInt(KEY_SAVE_SCORE,countOfHahi)
-    }*/
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -74,7 +77,7 @@ class HahiFragment : Fragment() {
     companion object{
         private const val valueScaleForImageRight = -1.0F
         private const val valueScaleForImageLeft = 1.0F
-        //private const val KEY_SAVE_SCORE = "key_score"
+        private const val KEY_SAVE_SCORE = "key_score"
     }
 
 }
