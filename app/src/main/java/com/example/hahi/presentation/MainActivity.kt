@@ -1,11 +1,11 @@
-package com.example.hahi
+package com.example.hahi.presentation
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.hahi.databinding.ActivityMainBinding
+import com.example.hahi.R
 
 class MainActivity : AppCompatActivity() {
 
